@@ -6,11 +6,11 @@ const client = new Client({
     password :"rithikdutt",
     host : "localhost",
     port:5432,
-    database:"daa",
+    database:"dba",
 })
 
 module.exports = (req,res) => {
-    const data = [req.body.firstname , req.body.lastname , req.body.number]
+    const data = [req.body.firstname , req.body.lastname , req.body.number, req.body.desc]
     const results = execute(data)
     console.log(results)
     if(!results){
@@ -43,7 +43,7 @@ async function connect(){
 }
 async function check(data){
     try{
-        await client.query("insert into contactus(firstname,lastname,contactno) values($1,$2,$3)",data)
+        await client.query("insert into contactus(firstname,lastname,contactno,descn) values($1,$2,$3,$4)",data)
         return(true)
     }
     catch(e){

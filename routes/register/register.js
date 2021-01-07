@@ -7,7 +7,7 @@ const client = new Client({
     password:"rithikdutt",
     host:"localhost",
     port:5432,
-    database:"daa"
+    database:"dba"
 })
 
 
@@ -43,6 +43,7 @@ async function connect(){
 }    
 async function createacc(data){
     try{
+        
         await client.query("insert into userss(username,email,password) values  ($1,$2,$3)",data);
         return true
     }

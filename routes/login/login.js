@@ -6,7 +6,7 @@ const client = new Client({
   password:"rithikdutt",
   host:"localhost",
   port:5432,
-  database:"daa"
+  database:"dba"
 })
 
 module.exports = async (req, res) => {
