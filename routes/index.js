@@ -4,6 +4,7 @@ const register = require('./register');
 const login = require('./login');
 const dashboard = require('./dashboard');
 const contact = require('./contact');
+const food = require('./food');
 
 
 
@@ -16,6 +17,7 @@ routes.use('/register', register);
 routes.use('/login',login);
 routes.use('/dashboard',dashboard);
 routes.use('/contact',contact);
+routes.use('/food',food);
 
 
 
